@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface DatePickerViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *shoMessage;
+@property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
+- (IBAction)dateChangePickerHandler:(id)sender;
 
 @end

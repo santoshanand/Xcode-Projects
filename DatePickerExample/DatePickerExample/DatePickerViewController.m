@@ -13,7 +13,8 @@
 @end
 
 @implementation DatePickerViewController
-
+@synthesize datePicker;
+@synthesize shoMessage;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -26,4 +27,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)dateChangePickerHandler:(id)sender {
+    NSDate *date = [datePicker date];
+    NSDateFormatter *nsDateFormater = [[NSDateFormatter alloc] init];
+    [nsDateFormater setDateFormat:@"EEEE"];
+    NSString *currentDate = [nsDateFormater stringFromDate:date];
+    [shoMessage setText:currentDate];
+}
 @end
