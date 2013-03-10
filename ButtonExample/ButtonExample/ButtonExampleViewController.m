@@ -26,4 +26,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)helloAlert:(id)sender {
+    UIAlertView *alert = [[UIAlertView alloc]
+                          initWithTitle:@"Title"
+                          message:@"Great you have created an Alert"
+                          delegate:nil
+                          cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+}
 @end

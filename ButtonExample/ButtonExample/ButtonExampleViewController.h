@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface ButtonExampleViewController : UIViewController
+- (IBAction)helloAlert:(id)sender;
 
 @end
